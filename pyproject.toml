@@ -1,3 +1,10 @@
+[build-system]
+requires = [
+    "setuptools>=80.7.1",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "predictions"
 version = "0.1.0"
@@ -47,4 +54,20 @@ dependencies = [
     "transformers>=4.51.3",
     "youtube-transcript-api>=1.2.2",
     "zstandard>=0.23.0",
+]
+
+[tool.setuptools]
+py-modules = [
+    "classification_models",
+    "clean_predictions",
+    "data_processing",
+    "domain_predictions_template",
+    "feature_extraction",
+    "log_files",
+    "main",
+    "metrics",
+    "pipelines",
+    "real_data_acquisition",
+    "text_generation_models",
+    "vector_stores",
 ]
